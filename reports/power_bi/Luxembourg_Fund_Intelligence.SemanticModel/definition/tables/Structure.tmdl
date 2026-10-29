@@ -1,0 +1,90 @@
+table Structure
+	lineageTag: 8ebe3ebb-e013-4136-a09b-3ece21bf3ae0
+
+	measure 'Structure assets EUR bn' = CALCULATE(SUM('Structure'[value]), 'Structure'[measure] = "net_assets")
+		formatString: #,0.0
+		lineageTag: f0bc545a-3a71-4e41-8b2d-757113e91d24
+
+	measure 'Structure UCI count' = CALCULATE(SUM('Structure'[value]), 'Structure'[measure] = "uci_count")
+		formatString: #,0
+		lineageTag: bb42adf8-80b9-42e2-b6fb-d85593f5687f
+
+	column month
+		dataType: string
+		lineageTag: 00d7d561-b8bb-4a4a-a88e-21fed6587822
+		summarizeBy: none
+		sourceColumn: month
+
+	column legal_status
+		dataType: string
+		lineageTag: 9b208b19-e016-438f-bd8d-49208e9da9ce
+		summarizeBy: none
+		sourceColumn: legal_status
+
+	column legal_form
+		dataType: string
+		lineageTag: 1121c141-9278-47e0-aa51-5311ce5b0141
+		summarizeBy: none
+		sourceColumn: legal_form
+
+	column measure
+		dataType: string
+		lineageTag: 72d16af6-ac24-4ff7-ae9c-b4aa9d3ad5e8
+		summarizeBy: none
+		sourceColumn: measure
+
+	column value
+		dataType: double
+		lineageTag: f235fbea-dd06-46c9-9d45-aab219e36fb8
+		summarizeBy: none
+		sourceColumn: value
+
+	column unit
+		dataType: string
+		lineageTag: 13eeaa1f-7f2b-4c4f-a2d2-58edcc7f43e4
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_file
+		dataType: string
+		lineageTag: 6ed1e022-ca09-435a-924a-1dd19b3149f3
+		summarizeBy: none
+		sourceColumn: source_file
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_sheet
+		dataType: string
+		lineageTag: c9f91f7b-d959-4273-8a8e-b28e7455f3ba
+		summarizeBy: none
+		sourceColumn: source_sheet
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_cell
+		dataType: string
+		lineageTag: 85276a3d-3c69-4cce-9886-b344e6532917
+		summarizeBy: none
+		sourceColumn: source_cell
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: string
+		lineageTag: 75b71d33-60f8-41c8-a3b7-c56fa3b7b81d
+		summarizeBy: none
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Structure = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "\fact_cssf_structure.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"month", type text}, {"legal_status", type text}, {"legal_form", type text}, {"measure", type text}, {"value", type number}}, "en-US")
+				in Typed
+

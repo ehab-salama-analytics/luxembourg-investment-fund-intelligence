@@ -1,0 +1,129 @@
+table CSSF
+	lineageTag: 45307068-6a95-42d4-8ee3-53ec82c31f32
+
+	measure 'UCI count' = VAR p = MAX(CSSF[month]) RETURN CALCULATE(SELECTEDVALUE(CSSF[uci_count]), CSSF[month] = p)
+		formatString: #,0
+		lineageTag: 52235612-c48b-44d8-87ce-2a89a73728f0
+
+	measure 'Net assets EUR bn' = VAR p = MAX(CSSF[month]) RETURN CALCULATE(SELECTEDVALUE(CSSF[net_assets]), CSSF[month] = p)
+		formatString: #,0.0
+		lineageTag: 22596d37-e43e-4780-aec2-6c2b33f42366
+
+	measure 'Net inflow EUR bn' = VAR p = MAX(CSSF[month]) RETURN CALCULATE(SELECTEDVALUE(CSSF[net_issuance]), CSSF[month] = p)
+		formatString: #,0.0
+		lineageTag: 36028587-2f8f-4616-8d8a-6ac644f42314
+
+	measure 'UCI count display' = IF(ISBLANK([UCI count]), BLANK(), FORMAT([UCI count], "#,0"))
+		lineageTag: 6660f6ad-6db6-4617-a11f-d796c10525bc
+
+	measure 'Net assets EUR bn display' = IF(ISBLANK([Net assets EUR bn]), BLANK(), FORMAT([Net assets EUR bn], "#,0.0"))
+		lineageTag: ac5a98f3-9728-4d1c-9882-d99e73415679
+
+	measure 'Net inflow EUR bn display' = IF(ISBLANK([Net inflow EUR bn]), BLANK(), FORMAT([Net inflow EUR bn], "#,0.0"))
+		lineageTag: e1c20db4-a683-4487-9e9a-d513be5f1426
+
+	column month
+		dataType: string
+		lineageTag: 2fde4908-9f61-41b4-a15a-b8fea93442f6
+		summarizeBy: none
+		sourceColumn: month
+
+	column uci_count
+		dataType: double
+		lineageTag: eb40eabc-01ec-4ef6-a6e3-4ed878ffcb07
+		summarizeBy: none
+		sourceColumn: uci_count
+
+	column net_assets
+		dataType: double
+		lineageTag: 5e8c3691-e929-4810-b9f0-379609bd9bd8
+		summarizeBy: none
+		sourceColumn: net_assets
+
+	column net_issuance
+		dataType: double
+		lineageTag: f31ae379-6117-4c2c-b3e4-8b53c3536bfa
+		summarizeBy: none
+		sourceColumn: net_issuance
+
+	column gross_issues
+		dataType: string
+		lineageTag: 65b14ce1-0abe-4e1a-9a5e-98e86eb01f12
+		summarizeBy: none
+		sourceColumn: gross_issues
+
+		annotation SummarizationSetBy = Automatic
+
+	column redemptions
+		dataType: string
+		lineageTag: ed09a443-e1ab-4ba3-8d66-2db9f8ef3d19
+		summarizeBy: none
+		sourceColumn: redemptions
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_variation
+		dataType: string
+		lineageTag: 1d8f9ecd-4028-4c75-95ed-38762e1a5e6e
+		summarizeBy: none
+		sourceColumn: market_variation
+
+		annotation SummarizationSetBy = Automatic
+
+	column monthly_change
+		dataType: string
+		lineageTag: 8fdf8a8d-9f32-4101-9102-20d08c1e4aee
+		summarizeBy: none
+		sourceColumn: monthly_change
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_row
+		dataType: string
+		lineageTag: f04a47d0-5684-4805-80ce-b198b6f40a03
+		summarizeBy: none
+		sourceColumn: source_row
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		lineageTag: dcbb2540-12e9-49bb-9aeb-30c3d40ab9cc
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_file
+		dataType: string
+		lineageTag: eec2f775-eed9-4fa6-bf03-f7b5c2607a4e
+		summarizeBy: none
+		sourceColumn: source_file
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: string
+		lineageTag: c9b6cb9b-1bdd-435d-9181-9f1bd374a420
+		summarizeBy: none
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_sheet
+		dataType: string
+		lineageTag: 76d77f44-08bb-4915-8033-3fb94d3a29a6
+		summarizeBy: none
+		sourceColumn: source_sheet
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CSSF = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "\fact_cssf_monthly.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"month", type text}, {"uci_count", type number}, {"net_assets", type number}, {"net_issuance", type number}}, "en-US")
+				in Typed
+

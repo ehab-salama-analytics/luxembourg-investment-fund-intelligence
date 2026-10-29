@@ -1,0 +1,11 @@
+data/
+.runtime/
+.venv/
+__pycache__/
+*.pyc
+reports/power_bi/**/.pbi/
+*.pbix
+*.pbit
+*.log
+private/
+docs/validation/runs/

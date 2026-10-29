@@ -1,0 +1,3 @@
+expression DataFolder = "SET_VALIDATED_ANALYTICAL_FOLDER_BEFORE_REFRESH"
+	lineageTag: d36c5c56-c21f-4b40-adfc-36d450eec956
+

@@ -1,0 +1,684 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "ecb.time_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "TIME_PERIOD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "TIME_PERIOD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_asset_history": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU asset history"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LU asset history": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_assets_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Assets EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_qoq_growth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU QoQ growth"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_yoy_growth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU YoY growth"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_euro_area_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Euro area share"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.latest_quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "Latest quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Latest selected quarter": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Comparison quarter": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_issues_history": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU issues history"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gross issues": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_redemptions_history": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU redemptions history"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Redemptions": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_shares_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Shares EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_issues_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Issues EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_redemptions_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Redemptions EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_net_issuance_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Net issuance EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_net_history": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU net history"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LU net history": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_issuance_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Issuance rate"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_transactions_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Transactions EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.area": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "area"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "area": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.latest_assets_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "Latest Assets EUR bn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Latest Assets EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.latest_yoy_growth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "Latest YoY growth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Latest YoY growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "structure.legal_form": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Structure",
+			          "ConceptualProperty": "legal_form"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "legal_form": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "structure.structure_uci_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Structure",
+			          "ConceptualProperty": "Structure UCI count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Structure UCI count": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "structure.legal_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Structure",
+			          "ConceptualProperty": "legal_status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "legal_status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "structure.structure_assets_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Structure",
+			          "ConceptualProperty": "Structure assets EUR bn"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Structure assets EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cssf.uci_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CSSF",
+			          "ConceptualProperty": "UCI count"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "cssf.net_assets_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CSSF",
+			          "ConceptualProperty": "Net assets EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "cssf.net_inflow_eur_bn": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CSSF",
+			          "ConceptualProperty": "Net inflow EUR bn"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "ecb.lu_assets_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Assets EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Luxembourg assets | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_qoq_growth_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU QoQ growth display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Quarterly asset growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_yoy_growth_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU YoY growth display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Annual asset growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_euro_area_share_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Euro area share display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Share of euro-area assets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_shares_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Shares EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shares outstanding | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_issues_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Issues EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gross issues | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_redemptions_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Redemptions EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Redemptions | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_net_issuance_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Net issuance EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Net issuance | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_issuance_rate_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Issuance rate display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Net issuance / prior shares": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ecb.lu_transactions_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ECB",
+			          "ConceptualProperty": "LU Transactions EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reported transactions | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cssf.uci_count_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CSSF",
+			          "ConceptualProperty": "UCI count display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Supervised UCIs | count": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cssf.net_assets_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CSSF",
+			          "ConceptualProperty": "Net assets EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Net assets | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cssf.net_inflow_eur_bn_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CSSF",
+			          "ConceptualProperty": "Net inflow EUR bn display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "August net issuance | EUR bn": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

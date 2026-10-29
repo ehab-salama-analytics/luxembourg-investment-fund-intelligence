@@ -1,0 +1,326 @@
+table ECB
+	lineageTag: 3d5c28ca-bc21-46ae-931a-96073a31463c
+
+	measure 'Assets EUR bn' = DIVIDE(SELECTEDVALUE(ECB[assets]), 1000)
+		formatString: #,0.0
+		lineageTag: e857982e-0c10-41ff-a4bf-2c2e425df97b
+
+	measure 'LU Assets EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Assets EUR bn], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: c386bda2-db44-4ed6-b524-9334480c9bb7
+
+	measure 'Shares EUR bn' = DIVIDE(SELECTEDVALUE(ECB[shares]), 1000)
+		formatString: #,0.0
+		lineageTag: d7800e52-710a-4582-938b-05a7b632751e
+
+	measure 'LU Shares EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Shares EUR bn], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: 3ad03015-d947-4cd8-8097-cabae28c386e
+
+	measure 'Issues EUR bn' = DIVIDE(SELECTEDVALUE(ECB[gross_issues]), 1000)
+		formatString: #,0.0
+		lineageTag: 26b5da7e-506d-496a-868d-efdfaa93b8e7
+
+	measure 'LU Issues EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Issues EUR bn], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: a4298204-c9da-40d0-ae42-73b4ac0aba70
+
+	measure 'Redemptions EUR bn' = DIVIDE(SELECTEDVALUE(ECB[redemptions]), 1000)
+		formatString: #,0.0
+		lineageTag: fa726d93-3e1d-4721-a3dc-ac71d260cbe9
+
+	measure 'LU Redemptions EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Redemptions EUR bn], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: 49c7e089-972d-4dbe-a286-63a4b2893490
+
+	measure 'Net issuance EUR bn' = DIVIDE(SELECTEDVALUE(ECB[net_issuance]), 1000)
+		formatString: #,0.0
+		lineageTag: 6a7ebb76-7b93-4d8d-8cbc-8be5e50fade4
+
+	measure 'LU Net issuance EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Net issuance EUR bn], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: 772a5238-6f92-4b58-8e6b-72b6de22f758
+
+	measure 'Transactions EUR bn' = DIVIDE(SELECTEDVALUE(ECB[transactions]), 1000)
+		formatString: #,0.0
+		lineageTag: 1d62bf4e-62a8-47c6-90b3-fd2c5a4dbb84
+
+	measure 'LU Transactions EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Transactions EUR bn], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: fd042e87-90ef-4789-8332-3f8ae6945732
+
+	measure 'QoQ growth' = DIVIDE(SELECTEDVALUE(ECB[qoq_growth_pct]), 100)
+		formatString: 0.00%
+		lineageTag: 6e6fcd69-500f-4ae9-82ea-141886282f36
+
+	measure 'LU QoQ growth' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([QoQ growth], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: 0.00%
+		lineageTag: abd2e3b9-3b44-4df3-a530-f30ed5e9a2a3
+
+	measure 'YoY growth' = DIVIDE(SELECTEDVALUE(ECB[yoy_growth_pct]), 100)
+		formatString: 0.00%
+		lineageTag: 7787c665-d77b-4f95-b34c-4f11ef00f192
+
+	measure 'LU YoY growth' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([YoY growth], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: 0.00%
+		lineageTag: 50091e27-6ea8-4409-8d5e-5334bbb80ab0
+
+	measure 'Euro area share' = DIVIDE(SELECTEDVALUE(ECB[share_of_euro_area_pct]), 100)
+		formatString: 0.00%
+		lineageTag: e82cf474-11db-44bf-8d29-040303a26ce2
+
+	measure 'LU Euro area share' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Euro area share], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: 0.00%
+		lineageTag: 491d5d6f-5cae-449a-acf9-1bbd33cc196d
+
+	measure 'Issuance rate' = DIVIDE(SELECTEDVALUE(ECB[net_issuance_rate_pct]), 100)
+		formatString: 0.00%
+		lineageTag: 9ab2c140-069a-414f-afb0-fb430c058ea5
+
+	measure 'LU Issuance rate' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Issuance rate], ECB[REF_AREA] = "LU", ECB[TIME_PERIOD] = p)
+		formatString: 0.00%
+		lineageTag: edcef8ca-35e2-48a8-8f9a-04a4d87d8c1d
+
+	measure 'Latest quarter' = MAX(ECB[TIME_PERIOD])
+		formatString: General
+		lineageTag: 385334e5-2598-44e8-8169-2aed9d02966d
+
+	measure 'LU asset history' = CALCULATE([Assets EUR bn], ECB[REF_AREA] = "LU")
+		formatString: #,0.0
+		lineageTag: 1f059cfd-2b86-46dd-98f0-5a600ef56392
+
+	measure 'LU net history' = CALCULATE([Net issuance EUR bn], ECB[REF_AREA] = "LU")
+		formatString: #,0.0
+		lineageTag: 80912061-91c5-45f5-8834-05a6a6256216
+
+	measure 'LU issues history' = CALCULATE([Issues EUR bn], ECB[REF_AREA] = "LU")
+		formatString: #,0.0
+		lineageTag: f9c8b8ba-57c3-4d6e-bb6e-cdd8c8406ade
+
+	measure 'LU redemptions history' = CALCULATE([Redemptions EUR bn], ECB[REF_AREA] = "LU")
+		formatString: #,0.0
+		lineageTag: 3023c3b2-e1be-4cad-87bb-c7af7f02881c
+
+	measure 'Latest Assets EUR bn' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Assets EUR bn], ECB[TIME_PERIOD] = p)
+		formatString: #,0.0
+		lineageTag: 3b9adf4e-7e0e-4eb2-9c5c-f53c9b6d5bc2
+
+	measure 'Latest YoY growth' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([YoY growth], ECB[TIME_PERIOD] = p)
+		formatString: 0.00%
+		lineageTag: 47a45516-7c82-46a6-bf2f-d8d8a371dbd3
+
+	measure 'Latest Euro area share' = VAR p = MAX(ECB[TIME_PERIOD]) RETURN CALCULATE([Euro area share], ECB[TIME_PERIOD] = p)
+		formatString: 0.00%
+		lineageTag: ce2c82f6-7157-44bc-98e3-c1cfe02b804c
+
+	measure 'LU Assets EUR bn display' = IF(ISBLANK([LU Assets EUR bn]), BLANK(), FORMAT([LU Assets EUR bn], "#,0.0"))
+		lineageTag: f0ac39d0-528b-45ca-8656-c04694ca8f6b
+
+	measure 'LU Shares EUR bn display' = IF(ISBLANK([LU Shares EUR bn]), BLANK(), FORMAT([LU Shares EUR bn], "#,0.0"))
+		lineageTag: dee2089a-0fc0-4559-86b0-ef0839990af9
+
+	measure 'LU Issues EUR bn display' = IF(ISBLANK([LU Issues EUR bn]), BLANK(), FORMAT([LU Issues EUR bn], "#,0.0"))
+		lineageTag: dd0326da-42b2-4d2e-80c9-0da1e56b84ad
+
+	measure 'LU Redemptions EUR bn display' = IF(ISBLANK([LU Redemptions EUR bn]), BLANK(), FORMAT([LU Redemptions EUR bn], "#,0.0"))
+		lineageTag: be07465c-c902-4b35-a291-464a3b0aa280
+
+	measure 'LU Net issuance EUR bn display' = IF(ISBLANK([LU Net issuance EUR bn]), BLANK(), FORMAT([LU Net issuance EUR bn], "#,0.0"))
+		lineageTag: 73719cc6-5289-4164-ab01-8fe4d15360cb
+
+	measure 'LU Transactions EUR bn display' = IF(ISBLANK([LU Transactions EUR bn]), BLANK(), FORMAT([LU Transactions EUR bn], "#,0.0"))
+		lineageTag: 7a857db5-7077-465e-b5ad-ba6cd0a7bc17
+
+	measure 'LU QoQ growth display' = IF(ISBLANK([LU QoQ growth]), BLANK(), FORMAT([LU QoQ growth], "0.00%"))
+		lineageTag: d3ea1a7d-f1ce-4272-ba1e-84b16ea8fa9b
+
+	measure 'LU YoY growth display' = IF(ISBLANK([LU YoY growth]), BLANK(), FORMAT([LU YoY growth], "0.00%"))
+		lineageTag: 26057068-2011-4e7b-8e7e-345ba7917f05
+
+	measure 'LU Euro area share display' = IF(ISBLANK([LU Euro area share]), BLANK(), FORMAT([LU Euro area share], "0.00%"))
+		lineageTag: 4838619f-6199-442b-8913-25f1826d3da2
+
+	measure 'LU Issuance rate display' = IF(ISBLANK([LU Issuance rate]), BLANK(), FORMAT([LU Issuance rate], "0.00%"))
+		lineageTag: 614ed10b-3b95-4c28-ab6c-a2c171a4b7c3
+
+	column REF_AREA
+		dataType: string
+		lineageTag: 4672bcb6-b9b3-4a1d-904c-3e391f98b2e7
+		summarizeBy: none
+		sourceColumn: REF_AREA
+
+	column TIME_PERIOD
+		dataType: string
+		lineageTag: e3a3e004-215b-41d8-8f93-2df53f6119c6
+		summarizeBy: none
+		sourceColumn: TIME_PERIOD
+
+	column area
+		dataType: string
+		lineageTag: 0950ee32-5086-4a7e-a17f-8b4f72431ac7
+		summarizeBy: none
+		sourceColumn: area
+
+	column assets
+		dataType: double
+		lineageTag: e2cbbec0-dfc0-4cf4-8fe0-70d13272aa31
+		summarizeBy: none
+		sourceColumn: assets
+
+	column shares
+		dataType: double
+		lineageTag: c5848980-9965-4860-9b02-db0107a0bdd7
+		summarizeBy: none
+		sourceColumn: shares
+
+	column gross_issues
+		dataType: double
+		lineageTag: cbd953fa-9252-4441-85fc-90bbdc74bd95
+		summarizeBy: none
+		sourceColumn: gross_issues
+
+	column redemptions
+		dataType: double
+		lineageTag: 02baf93e-7c23-4ba6-8cd4-a2817cfedbf9
+		summarizeBy: none
+		sourceColumn: redemptions
+
+	column net_issuance
+		dataType: double
+		lineageTag: 46268d9b-3319-4cf0-9729-1f134abcdb8d
+		summarizeBy: none
+		sourceColumn: net_issuance
+
+	column transactions
+		dataType: double
+		lineageTag: d0e1f538-5917-496a-acae-9443f43e3db5
+		summarizeBy: none
+		sourceColumn: transactions
+
+	column qoq_growth_pct
+		dataType: double
+		lineageTag: 326796cb-e786-435d-b994-360bd8cd6dbf
+		summarizeBy: none
+		sourceColumn: qoq_growth_pct
+
+	column yoy_growth_pct
+		dataType: double
+		lineageTag: 6141acad-5259-4966-afca-23508edba7dc
+		summarizeBy: none
+		sourceColumn: yoy_growth_pct
+
+	column share_of_euro_area_pct
+		dataType: double
+		lineageTag: e97f6ff9-b720-4b6d-849b-c1f0c59f9b8f
+		summarizeBy: none
+		sourceColumn: share_of_euro_area_pct
+
+	column net_issuance_rate_pct
+		dataType: double
+		lineageTag: 7a1cbca4-15b6-4f42-b5b7-1f316953de98
+		summarizeBy: none
+		sourceColumn: net_issuance_rate_pct
+
+	column issuance_transaction_difference
+		dataType: double
+		lineageTag: 5c400e7a-791d-4f3e-bc5d-ecf490ab8cdd
+		summarizeBy: none
+		sourceColumn: issuance_transaction_difference
+
+	column previous_assets
+		dataType: string
+		lineageTag: 119dfbe4-3146-4cba-992c-0c8305dfd1fb
+		summarizeBy: none
+		sourceColumn: previous_assets
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_ago_assets
+		dataType: string
+		lineageTag: 28ba2819-2b7b-4a0e-9717-9b92d4b89036
+		summarizeBy: none
+		sourceColumn: year_ago_assets
+
+		annotation SummarizationSetBy = Automatic
+
+	column previous_shares
+		dataType: string
+		lineageTag: bd1bd0b7-df62-4a11-ace7-37dc6391691a
+		summarizeBy: none
+		sourceColumn: previous_shares
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_change
+		dataType: string
+		lineageTag: c7e663a9-3cc3-4acd-8618-fc40fa308888
+		summarizeBy: none
+		sourceColumn: asset_change
+
+		annotation SummarizationSetBy = Automatic
+
+	column shares_change
+		dataType: string
+		lineageTag: f8128d70-ba0c-472b-8de7-0e32400fffaa
+		summarizeBy: none
+		sourceColumn: shares_change
+
+		annotation SummarizationSetBy = Automatic
+
+	column shares_nontransaction_residual
+		dataType: string
+		lineageTag: acdf0a3b-026e-4c0a-a1ee-c6789ec209b9
+		summarizeBy: none
+		sourceColumn: shares_nontransaction_residual
+
+		annotation SummarizationSetBy = Automatic
+
+	column flow_reversal
+		dataType: string
+		lineageTag: 1c70fc81-4ca0-4d9b-a581-6b0c1f430395
+		summarizeBy: none
+		sourceColumn: flow_reversal
+
+		annotation SummarizationSetBy = Automatic
+
+	column asset_decline
+		dataType: string
+		lineageTag: 44ce3a7b-919a-4086-bc30-2b0d7e6b9285
+		summarizeBy: none
+		sourceColumn: asset_decline
+
+		annotation SummarizationSetBy = Automatic
+
+	column two_quarter_asset_decline
+		dataType: string
+		lineageTag: b08e2662-939f-4378-a7ae-614f466883ea
+		summarizeBy: none
+		sourceColumn: two_quarter_asset_decline
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		lineageTag: 38b56aa3-7d18-43ce-9e18-d7c7a22e902f
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: string
+		lineageTag: 26217fbe-59ed-4e60-8a9c-23557e37af3a
+		summarizeBy: none
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ECB = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "\mart_ecb_quarterly.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"REF_AREA", type text}, {"TIME_PERIOD", type text}, {"area", type text}, {"assets", type number}, {"shares", type number}, {"gross_issues", type number}, {"redemptions", type number}, {"net_issuance", type number}, {"transactions", type number}, {"qoq_growth_pct", type number}, {"yoy_growth_pct", type number}, {"share_of_euro_area_pct", type number}, {"net_issuance_rate_pct", type number}, {"issuance_transaction_difference", type number}}, "en-US")
+				in Typed
+

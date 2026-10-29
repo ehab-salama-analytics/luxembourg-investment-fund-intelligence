@@ -1,0 +1,17 @@
+{
+  "runs": [
+    "20261028T234250_441398",
+    "20261028T234800_179012"
+  ],
+  "table_equality": {
+    "dim_geography.parquet": true,
+    "dim_period.parquet": true,
+    "dim_statistical_measure.parquet": true,
+    "fact_cssf_monthly.parquet": true,
+    "fact_cssf_structure.parquet": true,
+    "fact_investment_fund_statistics.parquet": true,
+    "mart_ecb_quarterly.parquet": true
+  },
+  "passed": 7,
+  "failed": 0
+}

@@ -1,0 +1,261 @@
+{
+  "passed": 51,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "01_ECB_IVF_Total_Assets_2018_Onward.csv hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01_ECB_IVF_Total_Assets_2018_Onward.csv observation count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02_ECB_IVF_Fund_Shares_and_Flows_2018_Onward.csv hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02_ECB_IVF_Fund_Shares_and_Flows_2018_Onward.csv observation count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03_CSSF_Basic_Statistical_Data_UCIs_August_2026.xlsx hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Raw/staging/fact cardinality",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique full series-period grain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique KPI area-period grain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All physical metadata preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Numeric values reconcile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Units and scaling retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Quarter parsing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Five reporting areas only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Geography labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Stock/flow classification",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No CSSF observations mixed into ECB",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI assets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI shares",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI gross_issues",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI redemptions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI transactions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI qoq_growth_pct",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI yoy_growth_pct",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI net_issuance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI net_issuance_rate_pct",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI share_of_euro_area_pct",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI issuance_transaction_difference",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI shares_nontransaction_residual",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Independent full-source KPI asset_change",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "First quarter growth unavailable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "First four quarters annual growth unavailable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Euro area denominator is source aggregate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Missing-quarter lookup fixture",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Missing numeric observations preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF history cardinality",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF month grain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF raw numeric reconciliation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF issuance arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF stock movement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF movement components",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF initial missing changes preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF structural leaf grain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF totals excluded from leaf fact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF structural raw reconciliation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF structural counts tie to history",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF structural net assets tie to history",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF row/column count margins",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF row/column asset margins",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF umbrella count identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF compartment/unit identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSSF lossless nonblank cell count",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}
